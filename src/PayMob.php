@@ -105,13 +105,13 @@ class PayMob
      * @param  int  $merchant_order_id
      * @return array
      */
-    public function makeOrderPaymob($token, $merchant_id, $amount_cents, $merchant_order_id)
+    public function makeOrderPaymob($token, $merchant_id, $amount_cents)
     {
         // Request body
         $json = [
             'merchant_id'            => $merchant_id,
             'amount_cents'           => $amount_cents,
-            'merchant_order_id'      => $merchant_order_id,
+        
             'currency'               => 'EGP',
             'notify_user_with_email' => true
         ];
